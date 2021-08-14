@@ -1,0 +1,72 @@
+@import "../../base/mediaQueries";
+
+.table {
+  background-color: $almostwhite;
+}
+.table_title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 3.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid $grey;
+  margin-top: 2rem;
+  & span {
+    display: none;
+  }
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.gridItemContainer {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+.gridItem {
+  background-color: $white;
+  padding: 1rem;
+  padding-right: 0;
+  height: 3rem;
+  font-weight: 300;
+  border-bottom: 1px solid $grey;
+  font-size: 0.9rem;
+  &.brand {
+    text-transform: uppercase;
+  }
+  &.subtitle {
+    display: flex;
+    font-weight: 500;
+    border-bottom: none;
+    height: 3.3rem;
+    background-color: $almostwhite;
+  }
+  & span {
+    font-weight: 300;
+    margin-left: 2px;
+  }
+}
+
+@include media-down(md) {
+  .table_title {
+    font-size: 0.8rem;
+  }
+  .gridItem {
+    font-size: 0.7rem;
+    &.subtitle {
+      font-size: 0.8rem;
+    }
+    & span {
+      display: none;
+    }
+  }
+}
+@include media-down(sm) {
+  .table_title {
+    & span {
+      display: initial;
+      font-weight: 300;
+    }
+  }
+}

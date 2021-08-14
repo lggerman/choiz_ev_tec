@@ -1,0 +1,31 @@
+@import "../../base/mediaQueries";
+
+.medicineList {
+  background-color: #f8f8f8;
+  height: 1120px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 330px;
+}
+.medicineList_title {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+  margin: 4rem auto;
+}
+@include media-down(lg) {
+  .medicineList {
+    padding: 0 7rem;
+    height: 950px;
+  }
+  .medicineList_title {
+    font-size: 2rem;
+    margin: 2rem auto;
+  }
+}
+@include media-down(md) {
+  .medicineList {
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,74 @@
+@import "../../base/mediaQueries";
+
+.hero {
+  width: 100%;
+  height: 460px;
+  background: linear-gradient(
+    205.22deg,
+    #ffa15c -2.89%,
+    rgba(255, 91, 146, 0.95) 59.15%,
+    #771cfe 125.51%
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.hero_elipse {
+  position: absolute;
+  width: 445px;
+  height: 415px;
+  left: 0;
+  top: 0px;
+  border-radius: 0 0 100% 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 21.81%,
+    rgba(255, 255, 255, 0.2) 84.31%
+  );
+}
+.hero_title {
+  color: white;
+  font-weight: 500;
+  font-size: 3.8rem;
+  line-height: 75px;
+  letter-spacing: 3px;
+  width: 760px;
+  margin: 185px 120px auto;
+  z-index: 5;
+}
+.hero_image {
+  width: 240px;
+  height: 255px;
+  background: url("../../../assets/hero_logo.svg");
+  position: absolute;
+  right: 150px;
+  bottom: 0;
+}
+
+@include media-down(md) {
+  .hero {
+    height: 550px;
+    text-align: center;
+  }
+  .hero_title {
+    margin: 0 3rem 170px;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    line-height: 4rem;
+  }
+  .hero_image {
+    right: 0;
+    left: 50%;
+  }
+}
+@include media-down(sm) {
+  .hero {
+    height: 600px;
+  }
+  .hero_title {
+    font-size: 2rem;
+  }
+  .hero_image {
+    left: 30%;
+  }
+}

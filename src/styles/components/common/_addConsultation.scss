@@ -1,0 +1,48 @@
+@import "../../base/variables";
+@import "../../base/mediaQueries";
+
+.addConsultation {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.addConsultation_title {
+  font-size: 26px;
+  width: 520px;
+  font-weight: 500;
+}
+.addConsultation_button {
+  background-color: $secondary-color;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  width: 280px;
+  height: 50px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@include media-down(md) {
+  .addConsultation {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .addConsultation_title {
+    font-size: 1.3rem;
+    width: 420px;
+  }
+  .addConsultation_title,
+  .addConsultation_button {
+    margin: 1rem;
+  }
+}
+
+@include media-down(sm) {
+  .addConsultation_title {
+    width: 320px;
+    font-size: 1rem;
+  }
+}
