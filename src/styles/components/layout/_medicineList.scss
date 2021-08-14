@@ -26,6 +26,7 @@
 }
 @include media-down(md) {
   .medicineList {
-    padding: 0 1rem;
+    display: block;
+    padding: 1.5rem 1rem;
   }
 }
